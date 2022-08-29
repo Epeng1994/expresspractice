@@ -9,14 +9,10 @@ const baseObject = {
 
 }
 
-
-/**
- * @type { Object.<string, import("knex").Knex.Config> }
- */
 module.exports = {
   development: baseObject,
   staging: {
-    client: 'postgresql',
+    client: 'sqlite3',
     connection: {
       database: 'my_db',
       user:     'username',
@@ -31,7 +27,7 @@ module.exports = {
     }
   },
   production: {
-    client: 'postgresql',
+    client: 'sqlite3',
     connection: {
       database: 'my_db',
       user:     'username',
